@@ -5,7 +5,7 @@ import { filterStatus } from 'redux/constants';
 import { getFilterStatus, getTasks } from 'redux/selectors';
 
 export const TaskList = () => {
-  const tasks = useSelector(getTasks);
+  const { items: tasks } = useSelector(getTasks);
   const status = useSelector(getFilterStatus);
 
   const getTaskList = () => {

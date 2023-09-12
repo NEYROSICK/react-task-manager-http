@@ -1,7 +1,7 @@
 import { MdClose } from 'react-icons/md';
 import css from './Task.module.css';
 import { useDispatch } from 'react-redux';
-import { checkTask, removeTask } from 'redux/tasksSlice';
+import { checkTask, removeTask } from 'redux/operations';
 
 export const Task = ({ task }) => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ export const Task = ({ task }) => {
   };
 
   const handleChange = () => {
-    dispatch(checkTask(task.id));
+    dispatch(checkTask(task));
   };
 
   return (
